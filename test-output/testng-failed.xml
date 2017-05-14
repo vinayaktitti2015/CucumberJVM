@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="2" configfailurepolicy="continue" guice-stage="DEVELOPMENT" name="Failed suite [Test Suite]" parallel="tests">
+  <test name="Login">
+    <classes>
+      <class name="step_definitions.Test1"/>
+    </classes>
+  </test> <!-- Login -->
+  <test name="Homepage">
+    <classes>
+      <class name="step_definitions.Test2"/>
+    </classes>
+  </test> <!-- Homepage -->
+  <test name="Login(failed)" parallel="tests">
+    <classes>
+      <class name="step_definitions.Test1">
+        <methods>
+          <include name="tearDownClass"/>
+          <include name="setUpClass"/>
+          <include name="feature" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- step_definitions.Test1 -->
+      <class name="step_definitions.Test2">
+        <methods>
+          <include name="tearDownClass"/>
+          <include name="setUpClass"/>
+        </methods>
+      </class> <!-- step_definitions.Test2 -->
+    </classes>
+  </test> <!-- Login(failed) -->
+  <test name="Homepage(failed)" parallel="tests">
+    <classes>
+      <class name="step_definitions.Test2">
+        <methods>
+          <include name="tearDownClass"/>
+          <include name="setUpClass"/>
+          <include name="feature" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- step_definitions.Test2 -->
+      <class name="step_definitions.Test1">
+        <methods>
+          <include name="tearDownClass"/>
+          <include name="setUpClass"/>
+        </methods>
+      </class> <!-- step_definitions.Test1 -->
+    </classes>
+  </test> <!-- Homepage(failed) -->
+</suite> <!-- Failed suite [Test Suite] -->
