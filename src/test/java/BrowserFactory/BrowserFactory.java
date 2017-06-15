@@ -1,5 +1,8 @@
 package BrowserFactory;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -33,7 +36,12 @@ public class BrowserFactory {
 			options.addArguments("--disable-pop-up-blocking");
 			options.addArguments("--disable-infobars");
 			options.addArguments("--enable-automation");
-			
+
+			Map<String, Object> prefs = new HashMap<String, Object>();
+			prefs.put("credentials_enable_service", false);
+			prefs.put("profile.password_manager_enabled", false);
+			options.setExperimentalOption("prefs", prefs);
+
 			DesiredCapabilities caps = DesiredCapabilities.chrome();
 			caps.setCapability(ChromeOptions.CAPABILITY, options);
 			driver = new ChromeDriver(caps);
@@ -57,8 +65,8 @@ public class BrowserFactory {
 			PhantomJsDriverManager.getInstance().setup();
 			driver = new PhantomJSDriver(dcap);
 
-		} else if (browser.equalsIgnoreCase("opera")){
-			
+		} else if (browser.equalsIgnoreCase("opera")) {
+
 			OperaDriverManager.getInstance().setup();
 			driver = new OperaDriver();
 		}

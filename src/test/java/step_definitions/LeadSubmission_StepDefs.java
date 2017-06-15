@@ -81,8 +81,7 @@ public class LeadSubmission_StepDefs {
 
 	@Then("^I check that the lead parsing to database succesfully$")
 	public void i_check_that_the_lead_parsing_to_database_succesfully() throws Throwable {
-		// Write code here that turns the phrase above into concrete actions
-		throw new PendingException();
+		// skipped
 	}
 
 	@Then("^I navigate to detailspage$")

@@ -44,7 +44,7 @@ Feature: Search Property
     Then The header should be like "<header>"
 
     Examples: 
-      | keyword  | autosuggest                                     | header                                                   |
-      | Mah Sing | Sime Darby                                      | Sime Darby                                               |
-      | Cheras   | Cheras, Kuala Lumpur                            | cheras, kuala lumpur For Sale                            |
-      | park     | skyluxe on the park @ bukit jalil, kuala lumpur | skyluxe on the park @ bukit jalil, kuala lumpur For Sale |
+      | keyword  | autosuggest             | header                           |
+      | Mah Sing | Mah Sing Group Berhad   | mah sing group berhad For Sale   |
+      | Cheras   | Cheras, Kuala Lumpur    | cheras, kuala lumpur For Sale    |
+      | park     | johor halal park, johor | johor halal park, johor For Sale |

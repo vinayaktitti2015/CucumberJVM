@@ -12,7 +12,7 @@ import cucumber.api.junit.Cucumber;
 				"rerun:failed/rerun.txt"},
 		glue ={"step_definitions"},
 		monochrome = false,
-		tags = {"@positivescenario"}
+		tags = {"@login"}
 		)
 public class LoginAT{
 	

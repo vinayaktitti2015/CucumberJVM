@@ -7,6 +7,8 @@ Feature: Login Feature
   Background: Open Irealtor and Login
     Given I open Iproperty Website
     And I implicitly wait for "2" seconds
+    And I delete all cookies
+    And I refresh page
 
   @positivescenario
   Scenario Outline: Verify Successfull Sign-In
@@ -19,7 +21,6 @@ Feature: Login Feature
     And I sleep for few seconds
     Then I should see account name "Hello, iproperty !"
     And I Logout as user
-    And I delete all cookies
 
     Examples: 
       | username                | password  |

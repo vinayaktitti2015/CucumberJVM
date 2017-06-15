@@ -29,8 +29,8 @@ import utility.Capture_Screenshot;
 @RunWith(Cucumber.class)
 @CucumberOptions(features = "classpath:features", plugin = { "pretty",
 		"com.cucumber.listener.ExtentCucumberFormatter:target/Reports/extentreport.html",
-		"html:target/Reports/cucumber-html-report" }, glue = {
-				"step_definitions" }, monochrome = false, tags = { "@datatable" })
+		"html:target/Reports/cucumber-html-report", "rerun:failed/rerun.txt" }, glue = {
+				"step_definitions" }, monochrome = false, tags = { "@positivescenario" })
 
 public class ExtentTestRunner {
 
