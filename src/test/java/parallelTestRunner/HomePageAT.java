@@ -1,8 +1,8 @@
 package parallelTestRunner;
 
-import org.junit.runner.RunWith;
 import cucumber.api.CucumberOptions;
 import cucumber.api.junit.Cucumber;
+import org.junit.runner.RunWith;
 
 
 @RunWith(Cucumber.class)
@@ -12,7 +12,7 @@ import cucumber.api.junit.Cucumber;
 				"rerun:failed/rerun.txt"},
 		glue ={"step_definitions"},
 		monochrome = false,
-		tags = {"@homepage"}
+		tags = {"@searchPropType"}
 		)
 public class HomePageAT{
 	
