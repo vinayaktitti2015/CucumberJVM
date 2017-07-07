@@ -48,7 +48,7 @@ public class Wait_Utils {
 	public static void Visibilityof_AllElements(WebDriver driver, List<WebElement> locator) {
 		// TODO Auto-generated method stub
 		WebDriverWait wait = new WebDriverWait(driver, 5);
-		wait.until(ExpectedConditions.visibilityOfAllElements((List<WebElement>) locator));
+		wait.until(ExpectedConditions.visibilityOfAllElements(locator));
 	}
 
 	// use for StaleElementReference Exceptions

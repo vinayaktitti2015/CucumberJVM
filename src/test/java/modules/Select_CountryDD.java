@@ -12,7 +12,7 @@ import utility.DD_Util;
 public class Select_CountryDD {
 
 	public static void Execute(WebDriver driver, WebElement element, String value)
-			throws IOException, InterruptedException, Exception {
+			throws Exception {
 
 		String URL = driver.getCurrentUrl();
 		if (URL.contains(".my")) {

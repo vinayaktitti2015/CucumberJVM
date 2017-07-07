@@ -12,7 +12,7 @@ import org.junit.runner.RunWith;
 				"rerun:failed/rerun.txt"},
 		glue ={"step_definitions"},
 		monochrome = false,
-		tags = {"@searchPropType"}
+		tags = {"@homepage"}
 		)
 public class HomePageAT{
 	

@@ -26,7 +26,7 @@ public class ConsumerLogin {
 	static WebDriver driver;
 	
 	public ConsumerLogin(WebDriver driver){
-		this.driver = driver;
+		ConsumerLogin.driver = driver;
 		page = new LoginPage_POM(driver);
 	}
 

@@ -54,7 +54,7 @@ public class Login_StepDefs {
 	@When("^I login as Consumer$")
 	public void i_login_as_Consumer() throws Throwable {
 		ConsumerLogin obj = new ConsumerLogin(driver);
-		obj.test_SuccessfulLogin();
+		ConsumerLogin.test_SuccessfulLogin();
 	}
 
 	@Then("^I Logout as user$")
