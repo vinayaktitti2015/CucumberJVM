@@ -1,9 +1,10 @@
 @homepage
+#noinspection CucumberUndefinedStep
 Feature: Search Property
   As a consumer I go to Iproperty Website
   And search properties in Malaysia
 
-  Background: 
+  Background:
     Given I open Iproperty Website
     And I navigate to newlaunch sub-page
 
@@ -12,7 +13,7 @@ Feature: Search Property
     When I select "Condo/Serviced Residence" as propType
     And I click search button
     And I implicitly wait for few seconds
-    Then The propType should contain "Serviced Residence, Serviced Apartment, Condominium"
+    Then The propType should contain "Serviced Residence, Serviced Apartment, Condominium, Soho"
     And I should see "Serviced Residence"
     And I should see "Serviced Apartment"
     And I should see "Condominium"
@@ -31,9 +32,9 @@ Feature: Search Property
     And The breadcrumb should be like "<breadcrumb>"
     And The header should be like "<header>"
 
-    Examples: 
+    Examples:
       | propType                 | expectedpropType                                                                                            | URL                                           | breadcrumb                                                               | header                                |
-      | Condo/Serviced Residence | Serviced Residence, Serviced Apartment, Condominium                                                         | /listing/condo__serviced-residence/all-state/ | Properties > New Property Launch > New Condo/Serviced Residence for Sale | New Condo/Serviced Residence For Sale |
+      | Condo/Serviced Residence | Serviced Residence, Serviced Apartment, Condominium, Soho                                                   | /listing/condo__serviced-residence/all-state/ | Properties > New Property Launch > New Condo/Serviced Residence for Sale | New Condo/Serviced Residence For Sale |
       | Semi-D/Bungalow          | Semi-D/Bungalow, Bungalow House, Twin Courtyard Villa,Semi-detached House, Cluster Homes, Zero-Lot Bungalow | /listing/semi_d__bungalow/all-state/          | Properties > New Property Launch > New Semi-D/Bungalow for Sale          | New Semi-D/Bungalow For Sale          |
 
   @autocompletion
@@ -43,7 +44,7 @@ Feature: Search Property
     And I click search button
     Then The header should be like "<header>"
 
-    Examples: 
+    Examples:
       | keyword  | autosuggest             | header                           |
       | Mah Sing | Mah Sing Group Berhad   | mah sing group berhad For Sale   |
       | Cheras   | Cheras, Kuala Lumpur    | cheras, kuala lumpur For Sale    |

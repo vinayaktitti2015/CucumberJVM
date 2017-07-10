@@ -1,5 +1,6 @@
 #Author: vinayak@iproperty.com
 @login
+#noinspection CucumberUndefinedStep
 Feature: Login Feature
   As a consumer I login to iproperty website 
   And search for property
@@ -12,7 +13,7 @@ Feature: Login Feature
 
   @positivescenario
   Scenario Outline: Verify Successfull Sign-In
-    Then I should see "Find Malaysia Property & Real Estate"
+    #Then I should see "Find Malaysia Property & Real Estate"
     When I click on login button
     Then I should see "Sign-In"
     And I enter Username "<username>"
