@@ -1,6 +1,5 @@
 #Author: vinayak@iproperty.com
 @login
-#noinspection CucumberUndefinedStep
 Feature: Login Feature
   As a consumer I login to iproperty website 
   And search for property

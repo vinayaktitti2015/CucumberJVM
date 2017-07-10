@@ -1,5 +1,4 @@
 @appscan
-#noinspection CucumberUndefinedStep
 Feature: Automated Security Scanning
   Run automated application level security tests using ZAP
 

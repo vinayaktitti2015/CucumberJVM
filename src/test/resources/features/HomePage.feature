@@ -1,5 +1,4 @@
 @homepage
-#noinspection CucumberUndefinedStep
 Feature: Search Property
   As a consumer I go to Iproperty Website
   And search properties in Malaysia

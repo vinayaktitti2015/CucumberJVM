@@ -1,5 +1,4 @@
 @leadsubmission
-#noinspection CucumberUndefinedStep
 Feature: Lead Submission Malaysia
   In order to contact the developer
   As a user
